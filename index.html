@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Básico y Local para Google -->
+  <title>PHOENIX | Clases de Violín en Santa Cruz, Bolivia</title>
+  <meta name="description" content="Despierta tu talento musical con PHOENIX. Clases personalizadas de violín en Santa Cruz, Bolivia. Aprende paso a paso y transforma tu pasión por la música en melodías." />
+  <meta name="keywords" content="clases de violín, aprender violín, academia de violín Santa Cruz, clases de violín Bolivia, Phoenix violín, educación musical Santa Cruz" />
+  <meta name="author" content="PHOENIX" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PHOENIX | Clases de Violín en Santa Cruz, Bolivia" />
+  <meta property="og:description" content="Aprende a tocar el violín con acompañamiento personalizado y transforma tu pasión por la música en melodías." />
+  <meta property="og:locale" content="es_BO" />
+
+  <!-- Tipografías Elegantes: Playfair Display (Títulos) e Inter (Cuerpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            phoenix: {
+              night: '#101827',
+              nightLight: '#1A2438',
+              gold: '#D4AF65',
+              goldHover: '#C19A4E',
+              goldLight: '#E8CFA0',
+              beige: '#F5F0E7',
+              beigeDark: '#EAE1D2',
+              white: '#FFFFFF'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            'gold-glow': '0 10px 30px -5px rgba(212, 175, 101, 0.28)',
+            'card-soft': '0 12px 32px -8px rgba(16, 24, 39, 0.08)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Datos Estructurados JSON-LD (Schema.org) para SEO Local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["EducationalOrganization", "LocalBusiness"],
+        "name": "PHOENIX",
+        "description": "Academia dedicada a la enseñanza musical y clases personalizadas de violín en Santa Cruz, Bolivia.",
+        "telephone": "+59163607250",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Santa Cruz",
+          "addressCountry": "BO"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Santa Cruz"
+        }
+      },
+      {
+        "@type": "Course",
+        "name": "Clases de Violín",
+        "description": "Aprendizaje progresivo de violín con acompañamiento personalizado, desarrollo de habilidades musicales, disciplina y creatividad.",
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "PHOENIX"
+        },
+        "inLanguage": "es"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Estilos base y utilidades refinadas */
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #101827;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .font-display {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* Animación suave para aparición de secciones */
+    .reveal-section {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Pulso sutil para el botón flotante de WhatsApp */
+    @keyframes whatsapp-pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+      }
+      70% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    .wa-float-pulse {
+      animation: whatsapp-pulse 2.4s infinite;
+    }
+
+    /* Barra de desplazamiento elegante */
+    ::-webkit-scrollbar {
+      width: 9px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #101827;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D4AF65;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-phoenix-gold selection:text-phoenix-night">
+
+  <!-- =====================================================================
+       NAVEGACIÓN PRINCIPAL (Sticky Header con Identidad PHOENIX)
+  ====================================================================== -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-40 bg-phoenix-night/95 backdrop-blur-md border-b border-phoenix-gold/20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logotipo PHOENIX (Emblema SVG Fénix + Silueta de Violín) -->
+        <a href="#inicio" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-phoenix-gold rounded-lg p-1" aria-label="PHOENIX Inicio">
+          <div class="w-11 h-11 rounded-xl bg-phoenix-nightLight border border-phoenix-gold/40 flex items-center justify-center shadow-inner group-hover:border-phoenix-gold transition-colors">
+            <svg class="w-7 h-7 text-phoenix-gold" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Alas estilizadas de Fénix integradas con voluta y efes de violín -->
+              <path d="M24 6C21.5 10.5 17 13 10 13C12.5 18 16.5 21 21 22C15 23.5 10.5 27.5 9 33C14.5 32 19 29.5 22 26.5V39C22 40.6569 23.3431 42 25 42C26.6569 42 28 40.6569 28 39V26.5C31 29.5 35.5 32 41 33C39.5 27.5 35 23.5 29 22C33.5 21 37.5 18 40 13C33 13 28.5 10.5 26 6L24 3L24 6Z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="18" r="2.2" fill="currentColor"/>
+              <path d="M24 22V36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display text-2xl font-bold tracking-[0.18em] text-phoenix-white leading-none">PHOENIX</span>
+            <span class="text-[11px] uppercase tracking-[0.25em] text-phoenix-gold mt-1 font-medium">Clases de Violín</span>
+          </div>
+        </a>
+
+        <!-- Menú de Navegación Escritorio -->
+        <nav class="hidden md:flex items-center gap-7" aria-label="Navegación principal">
+          <a href="#inicio" class="text-sm font-medium text-phoenix-white/90 hover:text-phoenix-gold transition-colors py-2">Inicio</a>
+          <a href="#sobre-nosotros" class="text-sm font-medium text-phoenix-white/90 hover:text-phoenix-gold transition-colors py-2">Sobre Nosotros</a>
+          <a href="#clases" class="text-sm font-medium text-phoenix-white/90 hover:text-phoenix-gold transition-colors py-2">Clases</a>
+          <a href="#beneficios" class="text-sm font-medium text-phoenix-white/90 hover:text-phoenix-gold transition-colors py-2">Beneficios</a>
+          <a href="#galeria" class="text-sm font-medium text-phoenix-white/90 hover:text-phoenix-gold transition-colors py-2">Galería</a>
+          <a href="#contacto" class="text-sm font-medium text-phoenix-white/90 hover:text-phoenix-gold transition-colors py-2">Contacto</a>
+        </nav>
+
+        <!-- Botón CTA Header Escritorio -->
+        <div class="hidden md:flex items-center">
+          <a
+            href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-phoenix-gold hover:bg-phoenix-goldHover text-phoenix-night font-semibold text-sm transition-all duration-200 shadow-gold-glow hover:-translate-y-0.5"
+          >
+            <span>Solicitar Información</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Botón Menú Hamburguesa Móvil -->
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="md:hidden inline-flex items-center justify-center p-3 rounded-xl text-phoenix-white hover:text-phoenix-gold hover:bg-phoenix-nightLight focus:outline-none focus:ring-2 focus:ring-phoenix-gold transition-colors"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Abrir menú de navegación"
+        >
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Panel Desplegable Móvil -->
+    <div id="mobile-menu" class="hidden md:hidden bg-phoenix-night border-t border-phoenix-gold/20 px-4 pt-3 pb-6 space-y-2 shadow-2xl">
+      <a href="#inicio" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-phoenix-white hover:bg-phoenix-nightLight hover:text-phoenix-gold transition-colors">Inicio</a>
+      <a href="#sobre-nosotros" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-phoenix-white hover:bg-phoenix-nightLight hover:text-phoenix-gold transition-colors">Sobre Nosotros</a>
+      <a href="#clases" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-phoenix-white hover:bg-phoenix-nightLight hover:text-phoenix-gold transition-colors">Clases</a>
+      <a href="#beneficios" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-phoenix-white hover:bg-phoenix-nightLight hover:text-phoenix-gold transition-colors">Beneficios</a>
+      <a href="#galeria" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-phoenix-white hover:bg-phoenix-nightLight hover:text-phoenix-gold transition-colors">Galería</a>
+      <a href="#contacto" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-phoenix-white hover:bg-phoenix-nightLight hover:text-phoenix-gold transition-colors">Contacto</a>
+      <div class="pt-3">
+        <a
+          href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-phoenix-gold text-phoenix-night font-bold text-base shadow-gold-glow"
+        >
+          <span>QUIERO APRENDER VIOLÍN</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =====================================================================
+         1. PÁGINA DE INICIO (HERO SECTION DE ALTA CONVERSIÓN)
+    ====================================================================== -->
+    <section id="inicio" class="relative min-h-screen flex items-center pt-24 pb-16 lg:pt-28 lg:pb-24 bg-phoenix-night overflow-hidden">
+      <!-- Elementos decorativos de fondo (brillo dorado sutil) -->
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-phoenix-gold/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+      <div class="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-phoenix-gold/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Columna de Mensaje Persuasivo y Llamada a la Acción -->
+          <div class="lg:col-span-6 text-left space-y-6">
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-phoenix-nightLight border border-phoenix-gold/30 text-phoenix-gold text-xs sm:text-sm font-medium tracking-wider uppercase">
+              <span class="w-2 h-2 rounded-full bg-phoenix-gold animate-pulse"></span>
+              <span>Santa Cruz, Bolivia • Enseñanza Musical</span>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-phoenix-white leading-[1.12] tracking-tight">
+              DESPIERTA TU <span class="text-phoenix-gold">TALENTO MUSICAL</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-phoenix-beige/90 leading-relaxed max-w-xl font-light">
+              Aprende a tocar el violín y transforma tu pasión por la música en melodías
+            </p>
+
+            <p class="text-sm sm:text-base text-phoenix-white/75 leading-relaxed max-w-lg">
+              Imagina sostener el arco con seguridad y escuchar cómo tus primeras notas llenan el espacio de emoción. En <strong class="text-phoenix-gold font-semibold">PHOENIX</strong> te acompañamos paso a paso en cada etapa de tu aprendizaje.
+            </p>
+
+            <!-- Botón Principal a WhatsApp + Acción Secundaria -->
+            <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <a
+                href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl bg-phoenix-gold hover:bg-phoenix-goldHover text-phoenix-night font-bold text-sm sm:text-base tracking-wide transition-all duration-300 shadow-gold-glow hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-phoenix-gold/40"
+              >
+                <!-- Icono WhatsApp SVG -->
+                <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.473 1.332 4.986L2 22l5.184-1.359a9.927 9.927 0 0 0 4.847 1.258h.004c5.515 0 9.969-4.454 9.969-9.969A9.934 9.934 0 0 0 19.08 4.92 9.903 9.903 0 0 0 12.031 2Zm5.82 14.267c-.246.693-1.434 1.326-1.988 1.408-.514.076-1.164.109-1.879-.118-.434-.138-.99-.322-1.703-.63-2.996-1.293-4.953-4.312-5.103-4.512-.149-.2-1.219-1.621-1.219-3.092 0-1.471.771-2.194 1.045-2.493.274-.299.598-.374.797-.374.199 0 .398.002.572.01.184.009.43-.07.673.514.249.598.847 2.069.921 2.219.075.15.125.324.025.524-.1.199-.15.324-.299.498-.149.175-.314.39-.448.524-.149.149-.305.311-.131.61.174.299.774 1.277 1.662 2.068 1.142 1.018 2.104 1.334 2.403 1.483.299.15.473.125.648-.075.174-.199.747-.872.946-1.171.199-.299.398-.249.672-.15.274.1 1.743.822 2.042.971.299.15.498.224.573.349.074.125.074.722-.172 1.415Z"/>
+                </svg>
+                <span>QUIERO APRENDER VIOLÍN</span>
+              </a>
+
+              <a
+                href="#clases"
+                class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl border border-phoenix-gold/40 hover:border-phoenix-gold text-phoenix-white hover:text-phoenix-gold font-medium text-sm sm:text-base transition-all duration-200"
+              >
+                <span>Explorar Clases</span>
+              </a>
+            </div>
+
+            <!-- Indicadores de Confianza (Sin datos inventados) -->
+            <div class="pt-4 border-t border-phoenix-white/10 grid grid-cols-3 gap-4 max-w-md">
+              <div>
+                <p class="font-display text-lg sm:text-xl font-bold text-phoenix-gold">100%</p>
+                <p class="text-xs text-phoenix-white/75 mt-0.5">Enfoque personalizado</p>
+              </div>
+              <div>
+                <p class="font-display text-lg sm:text-xl font-bold text-phoenix-gold">Paso a paso</p>
+                <p class="text-xs text-phoenix-white/75 mt-0.5">Aprendizaje progresivo</p>
+              </div>
+              <div>
+                <p class="font-display text-lg sm:text-xl font-bold text-phoenix-gold">Directo</p>
+                <p class="text-xs text-phoenix-white/75 mt-0.5">Atención en Santa Cruz</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Visual: Fotografía Principal de Estudiante Aprendiendo Violín -->
+          <div class="lg:col-span-6 relative">
+            <div class="relative rounded-3xl overflow-hidden border-2 border-phoenix-gold/30 shadow-2xl bg-phoenix-nightLight">
+              <img
+                src="https://images.unsplash.com/photo-1465821185615-20b3c2fbf41b?auto=format&fit=crop&w=1200&q=85"
+                alt="Estudiante aprendiendo a tocar el violín con dedicación en PHOENIX"
+                class="w-full h-[380px] sm:h-[470px] lg:h-[530px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                onerror="this.onerror=null;this.src='https://placehold.co/900x700/101827/D4AF65?text=PHOENIX+-+Clases+de+Viol%C3%ADn';"
+              />
+              <!-- Degradado elegante inferior para legibilidad -->
+              <div class="absolute inset-0 bg-gradient-to-t from-phoenix-night/80 via-transparent to-transparent pointer-events-none"></div>
+
+              <!-- Tarjeta flotante de experiencia sonora interactiva -->
+              <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-phoenix-night/90 backdrop-blur-md border border-phoenix-gold/35 rounded-2xl p-4 flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-phoenix-gold/20 border border-phoenix-gold/40 flex items-center justify-center text-phoenix-gold shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-wider text-phoenix-gold font-semibold">Experiencia PHOENIX</p>
+                    <p class="text-xs sm:text-sm text-phoenix-white/90">De tus primeras notas a melodías expresivas</p>
+                  </div>
+                </div>
+                <button
+                  id="play-violin-chord"
+                  type="button"
+                  class="px-3.5 py-2 rounded-xl bg-phoenix-gold/15 hover:bg-phoenix-gold text-phoenix-gold hover:text-phoenix-night border border-phoenix-gold/40 text-xs font-semibold transition-colors shrink-0 focus:outline-none focus:ring-2 focus:ring-phoenix-gold"
+                  aria-label="Escuchar acorde de violín de muestra"
+                >
+                  ♪ Escuchar
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         2. SECCIÓN SOBRE NOSOTROS
+    ====================================================================== -->
+    <section id="sobre-nosotros" class="py-20 lg:py-28 bg-phoenix-beige reveal-section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Composición Visual Izquierda -->
+          <div class="lg:col-span-5 relative">
+            <div class="rounded-3xl overflow-hidden shadow-xl border border-phoenix-night/10 bg-phoenix-night">
+              <img
+                src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?auto=format&fit=crop&w=900&q=85"
+                alt="Violín clásico artesanal en la academia PHOENIX"
+                loading="lazy"
+                class="w-full h-[360px] sm:h-[440px] object-cover"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x900/101827/D4AF65?text=Academia+PHOENIX';"
+              />
+            </div>
+            <!-- Detalle decorativo inferior -->
+            <div class="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-6 bg-phoenix-night text-phoenix-white p-6 rounded-2xl shadow-xl border border-phoenix-gold/30 max-w-xs">
+              <p class="font-display italic text-phoenix-gold text-lg leading-snug">
+                “Cada estudiante posee una voz musical única; nuestra labor es guiarla con paciencia y dedicación.”
+              </p>
+              <p class="text-xs uppercase tracking-widest text-phoenix-beige/70 mt-3">— Academia PHOENIX</p>
+            </div>
+          </div>
+
+          <!-- Contenido Editorial Derecha -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 text-phoenix-night/80 font-semibold text-xs uppercase tracking-[0.2em]">
+              <span class="w-8 h-[2px] bg-phoenix-gold"></span>
+              <span>Sobre Nosotros</span>
+            </div>
+
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-phoenix-night leading-tight">
+              Una academia donde tu pasión por el violín encuentra su guía
+            </h2>
+
+            <p class="text-base sm:text-lg text-phoenix-night/85 leading-relaxed">
+              En <strong>PHOENIX</strong> nos dedicamos a la enseñanza musical del violín en <strong>Santa Cruz, Bolivia</strong>, brindando un espacio cálido, cercano y profundamente humano donde cada alumno avanza con seguridad.
+            </p>
+
+            <p class="text-base text-phoenix-night/80 leading-relaxed">
+              Sabemos que dar el primer paso frente a un instrumento tan expresivo puede generar dudas. Por ello, nuestro enfoque es <strong>personalizado y cercano</strong>: adaptamos el proceso de aprendizaje al ritmo, sensibilidad y objetivos de cada estudiante, acompañándote desde la postura inicial y el dominio del arco hasta la interpretación de melodías con confianza.
+            </p>
+
+            <!-- Pilares de Identidad -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3">
+              <div class="p-5 rounded-2xl bg-phoenix-white border border-phoenix-night/10 shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-phoenix-night text-phoenix-gold flex items-center justify-center mb-3">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                  </svg>
+                </div>
+                <h3 class="font-display text-lg font-bold text-phoenix-night">Trato Cercano</h3>
+                <p class="text-sm text-phoenix-night/75 mt-1 leading-relaxed">
+                  Atención dedicada para resolver cada inquietud técnica y musical con calidez.
+                </p>
+              </div>
+
+              <div class="p-5 rounded-2xl bg-phoenix-white border border-phoenix-night/10 shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-phoenix-night text-phoenix-gold flex items-center justify-center mb-3">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg>
+                </div>
+                <h3 class="font-display text-lg font-bold text-phoenix-night">Vocación Musical</h3>
+                <p class="text-sm text-phoenix-night/75 mt-1 leading-relaxed">
+                  Fomentamos el amor genuino por la música, disfrutando cada avance en el proceso.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. SECCIÓN DE CLASES (SIN INVENTAR PRECIOS, HORARIOS NI CERTIFICADOS)
+    ====================================================================== -->
+    <section id="clases" class="py-20 lg:py-28 bg-phoenix-white reveal-section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Encabezado de Sección -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div class="inline-flex items-center justify-center gap-2 text-phoenix-night/80 font-semibold text-xs uppercase tracking-[0.2em]">
+            <span class="w-6 h-[2px] bg-phoenix-gold"></span>
+            <span>Nuestras Clases</span>
+            <span class="w-6 h-[2px] bg-phoenix-gold"></span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-phoenix-night">
+            Clases de Violín diseñadas para tu crecimiento musical
+          </h2>
+          <p class="text-base sm:text-lg text-phoenix-night/75 leading-relaxed">
+            Ya sea que estés tomando un violín por primera vez o desees perfeccionar tu sonido, estructuramos cada sesión según tu punto de partida.
+          </p>
+        </div>
+
+        <!-- Tarjetas de Enfoque de Clases -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Tarjeta 1: Iniciación al Violín -->
+          <article class="group rounded-3xl bg-phoenix-beige/70 border border-phoenix-night/10 overflow-hidden shadow-card-soft hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="relative h-60 overflow-hidden bg-phoenix-night">
+              <img
+                src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=800&q=80"
+                alt="Iniciación al violín y lectura musical"
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x600/101827/D4AF65?text=Iniciaci%C3%B3n+al+Viol%C3%ADn';"
+              />
+              <div class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-phoenix-night/90 text-phoenix-gold text-xs font-semibold tracking-wide">
+                Primeros Pasos
+              </div>
+            </div>
+            <div class="p-7 flex-1 flex flex-col justify-between space-y-6">
+              <div class="space-y-3">
+                <h3 class="font-display text-2xl font-bold text-phoenix-night">Iniciación al Violín</h3>
+                <p class="text-sm sm:text-base text-phoenix-night/80 leading-relaxed">
+                  Ideal para comenzar desde cero. Aprenderás la postura natural del cuerpo, la sujeción correcta del instrumento y del arco, afinación auditiva y tus primeras melodías.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-phoenix-night/10">
+                <a
+                  href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-sm font-bold text-phoenix-night hover:text-phoenix-goldHover transition-colors"
+                >
+                  <span>Consultar por WhatsApp</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2: Técnica y Expresión Musical -->
+          <article class="group rounded-3xl bg-phoenix-beige/70 border border-phoenix-night/10 overflow-hidden shadow-card-soft hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="relative h-60 overflow-hidden bg-phoenix-night">
+              <img
+                src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=800&q=80"
+                alt="Técnica de arco y expresión musical en violín"
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x600/101827/D4AF65?text=T%C3%A9cnica+y+Expresi%C3%B3n';"
+              />
+              <div class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-phoenix-night/90 text-phoenix-gold text-xs font-semibold tracking-wide">
+                Evolución Sonora
+              </div>
+            </div>
+            <div class="p-7 flex-1 flex flex-col justify-between space-y-6">
+              <div class="space-y-3">
+                <h3 class="font-display text-2xl font-bold text-phoenix-night">Técnica y Expresión Musical</h3>
+                <p class="text-sm sm:text-base text-phoenix-night/80 leading-relaxed">
+                  Enfocado en refinar la limpieza del sonido, el control dinámico del arco, la agilidad en la mano izquierda y la sensibilidad artística para interpretar con fluidez.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-phoenix-night/10">
+                <a
+                  href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-sm font-bold text-phoenix-night hover:text-phoenix-goldHover transition-colors"
+                >
+                  <span>Consultar por WhatsApp</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3: Acompañamiento Personalizado -->
+          <article class="group rounded-3xl bg-phoenix-beige/70 border border-phoenix-night/10 overflow-hidden shadow-card-soft hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="relative h-60 overflow-hidden bg-phoenix-night">
+              <img
+                src="https://images.unsplash.com/photo-1514119412350-e174d90d280e?auto=format&fit=crop&w=800&q=80"
+                alt="Acompañamiento personalizado en clases de violín"
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x600/101827/D4AF65?text=Acompa%C3%B1amiento+Personalizado';"
+              />
+              <div class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-phoenix-night/90 text-phoenix-gold text-xs font-semibold tracking-wide">
+                A tu Ritmo
+              </div>
+            </div>
+            <div class="p-7 flex-1 flex flex-col justify-between space-y-6">
+              <div class="space-y-3">
+                <h3 class="font-display text-2xl font-bold text-phoenix-night">Acompañamiento Personalizado</h3>
+                <p class="text-sm sm:text-base text-phoenix-night/80 leading-relaxed">
+                  Guía directa y cercana adaptada a las metas personales de cada estudiante, fortaleciendo la confianza en cada clase y consolidando hábitos de práctica efectivos.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-phoenix-night/10">
+                <a
+                  href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-sm font-bold text-phoenix-night hover:text-phoenix-goldHover transition-colors"
+                >
+                  <span>Consultar por WhatsApp</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. SECCIÓN DE BENEFICIOS (5 PILARES CLAVE)
+    ====================================================================== -->
+    <section id="beneficios" class="py-20 lg:py-28 bg-phoenix-night text-phoenix-white reveal-section relative overflow-hidden">
+      <!-- Decoración sutil -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[42rem] h-[42rem] bg-phoenix-gold/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div class="inline-flex items-center justify-center gap-2 text-phoenix-gold font-semibold text-xs uppercase tracking-[0.2em]">
+            <span class="w-6 h-[2px] bg-phoenix-gold"></span>
+            <span>¿Por qué estudiar en PHOENIX?</span>
+            <span class="w-6 h-[2px] bg-phoenix-gold"></span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-phoenix-white">
+            Beneficios que transforman tu aprendizaje
+          </h2>
+          <p class="text-base sm:text-lg text-phoenix-beige/80 leading-relaxed">
+            Aprender violín va mucho más allá de leer partituras: es cultivar habilidades artísticas y personales que perduran toda la vida.
+          </p>
+        </div>
+
+        <!-- Grid de los 5 Beneficios Solicitados -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
+          
+          <!-- Beneficio 1 -->
+          <div class="lg:col-span-2 rounded-3xl bg-phoenix-nightLight/90 border border-phoenix-gold/25 p-7 hover:border-phoenix-gold/60 transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-phoenix-gold/15 border border-phoenix-gold/30 text-phoenix-gold flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold text-phoenix-white mb-2.5">
+              Desarrollo de habilidades musicales
+            </h3>
+            <p class="text-sm text-phoenix-beige/75 leading-relaxed">
+              Educa tu oído, mejora tu sentido del ritmo, la afinación y la coordinación motriz mientras comprendes el lenguaje de la música de forma práctica.
+            </p>
+          </div>
+
+          <!-- Beneficio 2 -->
+          <div class="lg:col-span-2 rounded-3xl bg-phoenix-nightLight/90 border border-phoenix-gold/25 p-7 hover:border-phoenix-gold/60 transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-phoenix-gold/15 border border-phoenix-gold/30 text-phoenix-gold flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold text-phoenix-white mb-2.5">
+              Aprendizaje progresivo
+            </h3>
+            <p class="text-sm text-phoenix-beige/75 leading-relaxed">
+              Avanza etapa por etapa con metas claras y alcanzables, consolidando cada fundamento técnico antes de asumir nuevos retos musicales.
+            </p>
+          </div>
+
+          <!-- Beneficio 3 -->
+          <div class="lg:col-span-2 rounded-3xl bg-phoenix-nightLight/90 border border-phoenix-gold/25 p-7 hover:border-phoenix-gold/60 transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-phoenix-gold/15 border border-phoenix-gold/30 text-phoenix-gold flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold text-phoenix-white mb-2.5">
+              Acompañamiento personalizado
+            </h3>
+            <p class="text-sm text-phoenix-beige/75 leading-relaxed">
+              Recibe orientación cercana y correcciones oportunas enfocadas en tus fortalezas y necesidades específicas en cada sesión.
+            </p>
+          </div>
+
+          <!-- Beneficio 4 (Centrado en fila inferior en escritorio) -->
+          <div class="lg:col-span-3 rounded-3xl bg-phoenix-nightLight/90 border border-phoenix-gold/25 p-7 hover:border-phoenix-gold/60 transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-phoenix-gold/15 border border-phoenix-gold/30 text-phoenix-gold flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold text-phoenix-white mb-2.5">
+              Desarrollo de disciplina y creatividad
+            </h3>
+            <p class="text-sm text-phoenix-beige/75 leading-relaxed">
+              Cultiva la constancia, la concentración y la paciencia, al mismo tiempo que liberas tu sensibilidad artística y capacidad de expresión personal.
+            </p>
+          </div>
+
+          <!-- Beneficio 5 -->
+          <div class="lg:col-span-3 rounded-3xl bg-phoenix-nightLight/90 border border-phoenix-gold/25 p-7 hover:border-phoenix-gold/60 transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-phoenix-gold/15 border border-phoenix-gold/30 text-phoenix-gold flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold text-phoenix-white mb-2.5">
+              Experiencia musical enriquecedora
+            </h3>
+            <p class="text-sm text-phoenix-beige/75 leading-relaxed">
+              Disfruta de un ambiente inspirador donde cada logro se celebra y la música se convierte en una fuente constante de bienestar y realización personal.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Llamada a la acción intermedia -->
+        <div class="mt-14 rounded-3xl bg-gradient-to-r from-phoenix-nightLight via-[#1F2B42] to-phoenix-nightLight border border-phoenix-gold/35 p-8 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div class="text-center lg:text-left space-y-2 max-w-2xl">
+            <h3 class="font-display text-2xl sm:text-3xl font-bold text-phoenix-white">
+              ¿Listo para dar el primer paso con el violín?
+            </h3>
+            <p class="text-sm sm:text-base text-phoenix-beige/85">
+              Escríbenos directamente por WhatsApp y recibe toda la información que necesitas para iniciar tus clases en PHOENIX.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-phoenix-gold hover:bg-phoenix-goldHover text-phoenix-night font-bold text-sm sm:text-base transition-all shadow-gold-glow shrink-0"
+          >
+            <span>QUIERO APRENDER VIOLÍN</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. GALERÍA VISUAL INTERACTIVA (CON FILTROS Y LIGHTBOX)
+    ====================================================================== -->
+    <section id="galeria" class="py-20 lg:py-28 bg-phoenix-beige reveal-section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-10">
+          <div class="inline-flex items-center justify-center gap-2 text-phoenix-night/80 font-semibold text-xs uppercase tracking-[0.2em]">
+            <span class="w-6 h-[2px] bg-phoenix-gold"></span>
+            <span>Galería</span>
+            <span class="w-6 h-[2px] bg-phoenix-gold"></span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-phoenix-night">
+            El arte del violín en cada detalle
+          </h2>
+          <p class="text-base sm:text-lg text-phoenix-night/75">
+            Explora momentos de práctica, dedicación e instrumentos que inspiran nuestro día a día musical.
+          </p>
+        </div>
+
+        <!-- Filtros de Categoría -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 mb-12" role="tablist" aria-label="Filtrar galería por categoría">
+          <button type="button" data-filter="all" class="gallery-filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold bg-phoenix-night text-phoenix-gold shadow-sm transition-all">
+            Todas
+          </button>
+          <button type="button" data-filter="instrumentos" class="gallery-filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-phoenix-white text-phoenix-night hover:bg-phoenix-night/10 transition-all">
+            Instrumentos
+          </button>
+          <button type="button" data-filter="clases" class="gallery-filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-phoenix-white text-phoenix-night hover:bg-phoenix-night/10 transition-all">
+            Clases
+          </button>
+          <button type="button" data-filter="aprendizaje" class="gallery-filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-phoenix-white text-phoenix-night hover:bg-phoenix-night/10 transition-all">
+            Aprendizaje
+          </button>
+        </div>
+
+        <!-- Cuadrícula de Fotografías -->
+        <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Foto 1 -->
+          <figure data-category="instrumentos" class="gallery-item group relative rounded-3xl overflow-hidden bg-phoenix-night shadow-md cursor-pointer aspect-[4/3]">
+            <img
+              src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?auto=format&fit=crop&w=800&q=80"
+              alt="Violín clásico de madera barnizada y arco"
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/101827/D4AF65?text=Instrumento+Cl%C3%A1sico';"
+            />
+            <figcaption class="absolute inset-0 bg-gradient-to-t from-phoenix-night/85 via-phoenix-night/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-phoenix-gold font-semibold">Instrumentos</span>
+              <p class="text-phoenix-white font-display text-lg font-semibold mt-1">Acústica y nobleza de la madera</p>
+            </figcaption>
+          </figure>
+
+          <!-- Foto 2 -->
+          <figure data-category="aprendizaje" class="gallery-item group relative rounded-3xl overflow-hidden bg-phoenix-night shadow-md cursor-pointer aspect-[4/3]">
+            <img
+              src="https://images.unsplash.com/photo-1465821185615-20b3c2fbf41b?auto=format&fit=crop&w=800&q=80"
+              alt="Estudiante interpretando una melodía en violín"
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/101827/D4AF65?text=Aprendizaje+Musical';"
+            />
+            <figcaption class="absolute inset-0 bg-gradient-to-t from-phoenix-night/85 via-phoenix-night/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-phoenix-gold font-semibold">Aprendizaje</span>
+              <p class="text-phoenix-white font-display text-lg font-semibold mt-1">Expresión y sensibilidad en cada nota</p>
+            </figcaption>
+          </figure>
+
+          <!-- Foto 3 -->
+          <figure data-category="clases" class="gallery-item group relative rounded-3xl overflow-hidden bg-phoenix-night shadow-md cursor-pointer aspect-[4/3]">
+            <img
+              src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=800&q=80"
+              alt="Práctica de técnica de arco durante clase de violín"
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/101827/D4AF65?text=Clases+de+Viol%C3%ADn';"
+            />
+            <figcaption class="absolute inset-0 bg-gradient-to-t from-phoenix-night/85 via-phoenix-night/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-phoenix-gold font-semibold">Clases</span>
+              <p class="text-phoenix-white font-display text-lg font-semibold mt-1">Postura y dominio técnico del arco</p>
+            </figcaption>
+          </figure>
+
+          <!-- Foto 4 -->
+          <figure data-category="instrumentos" class="gallery-item group relative rounded-3xl overflow-hidden bg-phoenix-night shadow-md cursor-pointer aspect-[4/3]">
+            <img
+              src="https://images.unsplash.com/photo-1514119412350-e174d90d280e?auto=format&fit=crop&w=800&q=80"
+              alt="Detalle de cuerdas, puente y efes de violín"
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/101827/D4AF65?text=Detalle+de+Viol%C3%ADn';"
+            />
+            <figcaption class="absolute inset-0 bg-gradient-to-t from-phoenix-night/85 via-phoenix-night/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-phoenix-gold font-semibold">Instrumentos</span>
+              <p class="text-phoenix-white font-display text-lg font-semibold mt-1">Precisión en cada cuerda</p>
+            </figcaption>
+          </figure>
+
+          <!-- Foto 5 -->
+          <figure data-category="aprendizaje" class="gallery-item group relative rounded-3xl overflow-hidden bg-phoenix-night shadow-md cursor-pointer aspect-[4/3]">
+            <img
+              src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=800&q=80"
+              alt="Partitura musical y estudio progresivo del violín"
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/101827/D4AF65?text=Estudio+Musical';"
+            />
+            <figcaption class="absolute inset-0 bg-gradient-to-t from-phoenix-night/85 via-phoenix-night/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-phoenix-gold font-semibold">Aprendizaje</span>
+              <p class="text-phoenix-white font-display text-lg font-semibold mt-1">Lectura musical paso a paso</p>
+            </figcaption>
+          </figure>
+
+          <!-- Foto 6 -->
+          <figure data-category="clases" class="gallery-item group relative rounded-3xl overflow-hidden bg-phoenix-night shadow-md cursor-pointer aspect-[4/3]">
+            <img
+              src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=800&q=80"
+              alt="Ensayo y concentración en sesión de violín"
+              loading="lazy"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              onerror="this.onerror=null;this.src='https://placehold.co/800x600/101827/D4AF65?text=Sesi%C3%B3n+de+Pr%C3%A1ctica';"
+            />
+            <figcaption class="absolute inset-0 bg-gradient-to-t from-phoenix-night/85 via-phoenix-night/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-phoenix-gold font-semibold">Clases</span>
+              <p class="text-phoenix-white font-display text-lg font-semibold mt-1">Disciplina, enfoque y pasión</p>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. SECCIÓN DE CONTACTO (DATOS OFICIALES + FORMULARIO UX OPTIMIZADO)
+    ====================================================================== -->
+    <section id="contacto" class="py-20 lg:py-28 bg-phoenix-white reveal-section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div class="inline-flex items-center justify-center gap-2 text-phoenix-night/80 font-semibold text-xs uppercase tracking-[0.2em]">
+            <span class="w-6 h-[2px] bg-phoenix-gold"></span>
+            <span>Contacto</span>
+            <span class="w-6 h-[2px] bg-phoenix-gold"></span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-phoenix-night">
+            Comienza hoy tu camino musical
+          </h2>
+          <p class="text-base sm:text-lg text-phoenix-night/75">
+            Contáctanos directamente por WhatsApp o prepara tu mensaje personalizado en segundos.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          
+          <!-- Tarjeta de Información Oficial de Contacto -->
+          <div class="lg:col-span-5 rounded-3xl bg-phoenix-night text-phoenix-white p-8 sm:p-10 flex flex-col justify-between border border-phoenix-gold/30 shadow-xl">
+            <div class="space-y-8">
+              <div>
+                <span class="text-xs uppercase tracking-[0.25em] text-phoenix-gold font-semibold">Información Directa</span>
+                <h3 class="font-display text-3xl font-bold text-phoenix-white mt-2">Phoenix</h3>
+                <p class="text-sm text-phoenix-beige/80 mt-2 leading-relaxed">
+                  Estamos listos para atender tus consultas sobre nuestras clases de violín y orientarte en tus primeros pasos.
+                </p>
+              </div>
+
+              <div class="space-y-5">
+                <!-- Marca -->
+                <div class="flex items-start gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-phoenix-nightLight border border-phoenix-gold/30 text-phoenix-gold flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-wider text-phoenix-gold/90 font-semibold">Marca</p>
+                    <p class="text-base font-medium text-phoenix-white mt-0.5">Phoenix — Clases de Violín</p>
+                  </div>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="flex items-start gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-phoenix-nightLight border border-phoenix-gold/30 text-phoenix-gold flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-wider text-phoenix-gold/90 font-semibold">WhatsApp y Teléfono</p>
+                    <div class="flex items-center gap-3 mt-0.5">
+                      <a href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="text-lg font-bold text-phoenix-white hover:text-phoenix-gold transition-colors">
+                        63607250
+                      </a>
+                      <button
+                        id="copy-phone-btn"
+                        type="button"
+                        class="text-xs px-2.5 py-1 rounded-lg bg-phoenix-nightLight hover:bg-phoenix-gold hover:text-phoenix-night text-phoenix-gold border border-phoenix-gold/30 transition-colors"
+                        aria-label="Copiar número de WhatsApp"
+                      >
+                        Copiar
+                      </button>
+                    </div>
+                    <p id="copy-feedback" class="text-xs text-phoenix-gold mt-1 hidden" role="status">Número copiado al portapapeles</p>
+                  </div>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="flex items-start gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-phoenix-nightLight border border-phoenix-gold/30 text-phoenix-gold flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-wider text-phoenix-gold/90 font-semibold">Ubicación</p>
+                    <p class="text-base font-medium text-phoenix-white mt-0.5">Santa Cruz, Bolivia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botón Directo a WhatsApp -->
+            <div class="pt-8 mt-8 border-t border-phoenix-white/10">
+              <a
+                href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-phoenix-gold hover:bg-phoenix-goldHover text-phoenix-night font-bold text-base transition-all shadow-gold-glow"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.473 1.332 4.986L2 22l5.184-1.359a9.927 9.927 0 0 0 4.847 1.258h.004c5.515 0 9.969-4.454 9.969-9.969A9.934 9.934 0 0 0 19.08 4.92 9.903 9.903 0 0 0 12.031 2Zm5.82 14.267c-.246.693-1.434 1.326-1.988 1.408-.514.076-1.164.109-1.879-.118-.434-.138-.99-.322-1.703-.63-2.996-1.293-4.953-4.312-5.103-4.512-.149-.2-1.219-1.621-1.219-3.092 0-1.471.771-2.194 1.045-2.493.274-.299.598-.374.797-.374.199 0 .398.002.572.01.184.009.43-.07.673.514.249.598.847 2.069.921 2.219.075.15.125.324.025.524-.1.199-.15.324-.299.498-.149.175-.314.39-.448.524-.149.149-.305.311-.131.61.174.299.774 1.277 1.662 2.068 1.142 1.018 2.104 1.334 2.403 1.483.299.15.473.125.648-.075.174-.199.747-.872.946-1.171.199-.299.398-.249.672-.15.274.1 1.743.822 2.042.971.299.15.498.224.573.349.074.125.074.722-.172 1.415Z"/>
+                </svg>
+                <span>CONTACTAR POR WHATSAPP</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Formulario de Consulta Rápida (Columna Única, Etiquetas Superiores, Validación Tolerante) -->
+          <div class="lg:col-span-7 rounded-3xl bg-phoenix-beige border border-phoenix-night/10 p-8 sm:p-10 shadow-card-soft">
+            <div class="mb-6">
+              <h3 class="font-display text-2xl sm:text-3xl font-bold text-phoenix-night">
+                Solicita información personalizada
+              </h3>
+              <p class="text-sm sm:text-base text-phoenix-night/75 mt-1.5">
+                Completa estos breves datos y te conectaremos al instante con nuestro WhatsApp oficial.
+              </p>
+            </div>
+
+            <form id="lead-form" novalidate class="space-y-5">
+              <!-- Campo 1: Nombre completo (Etiqueta persistente superior) -->
+              <div>
+                <label for="student-name" class="block text-sm font-semibold text-phoenix-night mb-1.5">
+                  Nombre completo <span class="text-red-700" aria-hidden="true">*</span>
+                </label>
+                <input
+                  id="student-name"
+                  name="studentName"
+                  type="text"
+                  required
+                  autocomplete="name"
+                  aria-describedby="student-name-hint student-name-error"
+                  class="w-full px-4 py-3.5 rounded-xl bg-phoenix-white border border-phoenix-night/20 text-phoenix-night text-base focus:outline-none focus:border-phoenix-night focus:ring-2 focus:ring-phoenix-gold transition-colors"
+                />
+                <p id="student-name-hint" class="text-xs text-phoenix-night/65 mt-1">
+                  Ejemplo: Sofía Méndez
+                </p>
+                <p id="student-name-error" class="hidden text-xs font-semibold text-red-700 mt-1.5 flex items-center gap-1.5" role="alert">
+                  <span aria-hidden="true">⚠</span>
+                  <span>Por favor, ingresa tu nombre para poder saludarte.</span>
+                </p>
+              </div>
+
+              <!-- Campo 2: Perfil del estudiante -->
+              <div>
+                <label for="student-profile" class="block text-sm font-semibold text-phoenix-night mb-1.5">
+                  ¿Para quién son las clases? <span class="text-red-700" aria-hidden="true">*</span>
+                </label>
+                <select
+                  id="student-profile"
+                  name="studentProfile"
+                  required
+                  aria-describedby="student-profile-error"
+                  class="w-full px-4 py-3.5 rounded-xl bg-phoenix-white border border-phoenix-night/20 text-phoenix-night text-base focus:outline-none focus:border-phoenix-night focus:ring-2 focus:ring-phoenix-gold transition-colors"
+                >
+                  <option value="">Selecciona una opción</option>
+                  <option value="Para mí (Adulto / Joven)">Para mí (Adulto / Joven)</option>
+                  <option value="Para mi hijo/a (Niño / Adolescente)">Para mi hijo/a (Niño / Adolescente)</option>
+                </select>
+                <p id="student-profile-error" class="hidden text-xs font-semibold text-red-700 mt-1.5 flex items-center gap-1.5" role="alert">
+                  <span aria-hidden="true">⚠</span>
+                  <span>Selecciona si las clases son para ti o para tu hijo/a.</span>
+                </p>
+              </div>
+
+              <!-- Campo 3: Experiencia previa -->
+              <div>
+                <label for="student-level" class="block text-sm font-semibold text-phoenix-night mb-1.5">
+                  Experiencia previa con el violín
+                </label>
+                <select
+                  id="student-level"
+                  name="studentLevel"
+                  class="w-full px-4 py-3.5 rounded-xl bg-phoenix-white border border-phoenix-night/20 text-phoenix-night text-base focus:outline-none focus:border-phoenix-night focus:ring-2 focus:ring-phoenix-gold transition-colors"
+                >
+                  <option value="Sin experiencia previa (Desde cero)">Sin experiencia previa (Desde cero)</option>
+                  <option value="Con conocimientos básicos">Con conocimientos básicos</option>
+                  <option value="Con experiencia intermedia">Con experiencia intermedia</option>
+                </select>
+              </div>
+
+              <!-- Botón de Envío Específico -->
+              <div class="pt-2">
+                <button
+                  type="submit"
+                  class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-phoenix-night hover:bg-phoenix-nightLight text-phoenix-gold font-bold text-base transition-all shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-phoenix-gold/50"
+                >
+                  <span>Enviar Consulta por WhatsApp</span>
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Mensaje de Confirmación Accesible -->
+              <div id="form-success-box" class="hidden rounded-2xl bg-phoenix-white border border-phoenix-gold p-4 text-sm text-phoenix-night space-y-2" role="status" aria-live="polite">
+                <p class="font-semibold text-phoenix-night">¡Todo listo! Tu consulta ha sido preparada.</p>
+                <p class="text-phoenix-night/80">Si WhatsApp no se abrió automáticamente, haz clic en el siguiente enlace directo:</p>
+                <a
+                  id="manual-wa-link"
+                  href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 font-bold text-phoenix-night underline decoration-phoenix-gold decoration-2 underline-offset-4"
+                >
+                  Abrir conversación en WhatsApp →
+                </a>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       FOOTER ELEGANTE
+  ====================================================================== -->
+  <footer class="bg-phoenix-night text-phoenix-white border-t border-phoenix-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        
+        <!-- Marca -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-phoenix-nightLight border border-phoenix-gold/40 flex items-center justify-center text-phoenix-gold">
+            <svg class="w-6 h-6" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M24 6C21.5 10.5 17 13 10 13C12.5 18 16.5 21 21 22C15 23.5 10.5 27.5 9 33C14.5 32 19 29.5 22 26.5V39C22 40.6569 23.3431 42 25 42C26.6569 42 28 40.6569 28 39V26.5C31 29.5 35.5 32 41 33C39.5 27.5 35 23.5 29 22C33.5 21 37.5 18 40 13C33 13 28.5 10.5 26 6L24 3L24 6Z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="18" r="2.2" fill="currentColor"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-display text-xl font-bold tracking-[0.18em] text-phoenix-white">PHOENIX</p>
+            <p class="text-xs text-phoenix-beige/70">Clases de Violín • Santa Cruz, Bolivia</p>
+          </div>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <nav class="flex flex-wrap items-center justify-center gap-6 text-sm text-phoenix-beige/80" aria-label="Navegación pie de página">
+          <a href="#inicio" class="hover:text-phoenix-gold transition-colors">Inicio</a>
+          <a href="#sobre-nosotros" class="hover:text-phoenix-gold transition-colors">Sobre Nosotros</a>
+          <a href="#clases" class="hover:text-phoenix-gold transition-colors">Clases</a>
+          <a href="#beneficios" class="hover:text-phoenix-gold transition-colors">Beneficios</a>
+          <a href="#galeria" class="hover:text-phoenix-gold transition-colors">Galería</a>
+          <a href="#contacto" class="hover:text-phoenix-gold transition-colors">Contacto</a>
+        </nav>
+
+        <!-- Contacto Directo -->
+        <div class="text-center md:text-right">
+          <a
+            href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sm font-semibold text-phoenix-gold hover:text-phoenix-goldLight transition-colors"
+          >
+            <span>WhatsApp: 63607250</span>
+          </a>
+          <p class="text-xs text-phoenix-white/50 mt-1">© <span id="current-year"></span> PHOENIX. Todos los derechos reservados.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       7. BOTÓN FLOTANTE DE WHATSAPP (PERMANENTE EN TODA LA APLICACIÓN)
+  ====================================================================== -->
+  <a
+    href="https://wa.me/59163607250?text=Hola%2C%20estoy%20interesado%2Fa%20en%20las%20clases%20de%20viol%C3%ADn%20de%20Phoenix.%20Quisiera%20recibir%20informaci%C3%B3n."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar a PHOENIX por WhatsApp al 63607250"
+    class="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50 group flex items-center gap-3 bg-[#25D366] hover:bg-[#20BD5A] text-white px-4 py-3.5 sm:px-5 sm:py-4 rounded-full shadow-2xl wa-float-pulse transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#25D366]/50"
+  >
+    <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.473 1.332 4.986L2 22l5.184-1.359a9.927 9.927 0 0 0 4.847 1.258h.004c5.515 0 9.969-4.454 9.969-9.969A9.934 9.934 0 0 0 19.08 4.92 9.903 9.903 0 0 0 12.031 2Zm5.82 14.267c-.246.693-1.434 1.326-1.988 1.408-.514.076-1.164.109-1.879-.118-.434-.138-.99-.322-1.703-.63-2.996-1.293-4.953-4.312-5.103-4.512-.149-.2-1.219-1.621-1.219-3.092 0-1.471.771-2.194 1.045-2.493.274-.299.598-.374.797-.374.199 0 .398.002.572.01.184.009.43-.07.673.514.249.598.847 2.069.921 2.219.075.15.125.324.025.524-.1.199-.15.324-.299.498-.149.175-.314.39-.448.524-.149.149-.305.311-.131.61.174.299.774 1.277 1.662 2.068 1.142 1.018 2.104 1.334 2.403 1.483.299.15.473.125.648-.075.174-.199.747-.872.946-1.171.199-.299.398-.249.672-.15.274.1 1.743.822 2.042.971.299.15.498.224.573.349.074.125.074.722-.172 1.415Z"/>
+    </svg>
+    <span class="hidden sm:inline font-semibold text-sm tracking-wide">¿Hablamos por WhatsApp?</span>
+  </a>
+
+  <!-- =====================================================================
+       MODAL LIGHTBOX PARA LA GALERÍA
+  ====================================================================== -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-phoenix-night/95 backdrop-blur-md flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+    <button
+      id="lightbox-close"
+      type="button"
+      class="absolute top-5 right-5 p-3 rounded-full bg-phoenix-nightLight text-phoenix-white hover:text-phoenix-gold border border-phoenix-gold/30 focus:outline-none focus:ring-2 focus:ring-phoenix-gold"
+      aria-label="Cerrar vista ampliada"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="max-w-4xl w-full space-y-4 text-center">
+      <img id="lightbox-img" src="" alt="" class="max-h-[75vh] w-auto mx-auto rounded-2xl border border-phoenix-gold/30 shadow-2xl object-contain" />
+      <p id="lightbox-caption" class="font-display text-xl text-phoenix-gold"></p>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       LÓGICA INTERACTIVA (Menú móvil, Galería, Validación Form, Audio)
+  ====================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Año actual dinámico en el footer
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+a
+      // 2. Navegación Móvil (Hamburguesa)
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('menu-icon-open');
+      const iconClose = document.getElementById('menu-icon-close');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+      function toggleMobileMenu(forceClose = false) {
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        const shouldOpen = forceClose ? false : !isExpanded;
+
+        mobileMenuBtn.setAttribute('aria-expanded', String(shouldOpen));
+        mobileMenu.classList.toggle('hidden', !shouldOpen);
+        iconOpen.classList.toggle('hidden', shouldOpen);
+        iconClose.classList.toggle('hidden', !shouldOpen);
+      }
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => toggleMobileMenu());
+      }
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener('click', () => toggleMobileMenu(true));
+      });
+
+      // 3. Animación suave de aparición al hacer scroll (IntersectionObserver)
+      const revealSections = document.querySelectorAll('.reveal-section');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+        revealSections.forEach((section) => revealObserver.observe(section));
+      } else {
+        revealSections.forEach((section) => section.classList.add('is-visible'));
+      }
+
+      // 4. Filtros y Lightbox de Galería
+      const filterButtons = document.querySelectorAll('.gallery-filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          filterButtons.forEach((b) => {
+            b.classList.remove('active', 'bg-phoenix-night', 'text-phoenix-gold');
+            b.classList.add('bg-phoenix-white', 'text-phoenix-night');
+          });
+          btn.classList.add('active', 'bg-phoenix-night', 'text-phoenix-gold');
+          btn.classList.remove('bg-phoenix-white', 'text-phoenix-night');
+
+          galleryItems.forEach((item) => {
+            const category = item.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // Lightbox Modal
+      const lightboxModal = document.getElementById('lightbox-modal');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const lightboxClose = document.getElementById('lightbox-close');
+
+      galleryItems.forEach((item) => {
+        item.addEventListener('click', () => {
+          const img = item.querySelector('img');
+          const caption = item.querySelector('figcaption p');
+          if (!img) return;
+
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightboxCaption.textContent = caption ? caption.textContent : img.alt;
+          lightboxModal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeLightbox() {
+        lightboxModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+      }
+
+      if (lightboxModal) {
+        lightboxModal.addEventListener('click', (e) => {
+          if (e.target === lightboxModal) closeLightbox();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+          closeLightbox();
+        }
+      });
+
+      // 5. Copiar número de WhatsApp (usando document.execCommand('copy') seguro en iframes)
+      const copyPhoneBtn = document.getElementById('copy-phone-btn');
+      const copyFeedback = document.getElementById('copy-feedback');
+
+      if (copyPhoneBtn) {
+        copyPhoneBtn.addEventListener('click', () => {
+          const tempInput = document.createElement('input');
+          tempInput.value = '63607250';
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          try {
+            document.execCommand('copy');
+            copyFeedback.classList.remove('hidden');
+            setTimeout(() => copyFeedback.classList.add('hidden'), 2800);
+          } catch (err) {
+            // Silencioso en caso de restricción del navegador
+          }
+          document.body.removeChild(tempInput);
+        });
+      }
+
+      // 6. Formulario de Consulta con Validación Tolerante (onBlur y Submit) -> Redirección a WhatsApp
+      const leadForm = document.getElementById('lead-form');
+      const nameInput = document.getElementById('student-name');
+      const nameError = document.getElementById('student-name-error');
+      const profileSelect = document.getElementById('student-profile');
+      const profileError = document.getElementById('student-profile-error');
+      const levelSelect = document.getElementById('student-level');
+      const successBox = document.getElementById('form-success-box');
+      const manualWaLink = document.getElementById('manual-wa-link');
+
+      function validateName() {
+        const valid = nameInput.value.trim().length >= 2;
+        nameError.classList.toggle('hidden', valid);
+        nameInput.setAttribute('aria-invalid', String(!valid));
+        if (!valid) {
+          nameInput.classList.add('border-red-600');
+        } else {
+          nameInput.classList.remove('border-red-600');
+        }
+        return valid;
+      }
+
+      function validateProfile() {
+        const valid = profileSelect.value.trim() !== '';
+        profileError.classList.toggle('hidden', valid);
+        profileSelect.setAttribute('aria-invalid', String(!valid));
+        if (!valid) {
+          profileSelect.classList.add('border-red-600');
+        } else {
+          profileSelect.classList.remove('border-red-600');
+        }
+        return valid;
+      }
+
+      if (nameInput) nameInput.addEventListener('blur', validateName);
+      if (profileSelect) profileSelect.addEventListener('blur', validateProfile);
+
+      if (leadForm) {
+        leadForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const isNameValid = validateName();
+          const isProfileValid = validateProfile();
+
+          if (!isNameValid) {
+            nameInput.focus();
+            return;
+          }
+          if (!isProfileValid) {
+            profileSelect.focus();
+            return;
+          }
+
+          const nombre = nameInput.value.trim();
+          const perfil = profileSelect.value;
+          const nivel = levelSelect.value;
+
+          // Mantiene el mensaje oficial requerido enriquecido con los datos del interesado
+          const message = `Hola, estoy interesado/a en las clases de violín de Phoenix. Quisiera recibir información.\n\n• Nombre: ${nombre}\n• Modalidad: ${perfil}\n• Nivel: ${nivel}`;
+          const waUrl = `https://wa.me/59163607250?text=${encodeURIComponent(message)}`;
+
+          manualWaLink.href = waUrl;
+          successBox.classList.remove('hidden');
+          window.open(waUrl, '_blank', 'noopener,noreferrer');
+        });
+      }
+
+      // 7. Muestra Sonora Interactiva de Violín (Web Audio API sintetizada sin dependencias externas)
+      const playChordBtn = document.getElementById('play-violin-chord');
+      let audioCtx = null;
+
+      if (playChordBtn) {
+        playChordBtn.addEventListener('click', () => {
+          try {
+            const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+            if (!AudioContextClass) return;
+
+            if (!audioCtx) {
+              audioCtx = new AudioContextClass();
+            }
+            if (audioCtx.state === 'suspended') {
+              audioCtx.resume();
+            }
+
+            // Notas afinación real de violín (Sol3, Re4, La4, Mi5) en arpegio expresivo
+            const violinNotes = [196.00, 293.66, 440.00, 659.25];
+            const now = audioCtx.currentTime;
+
+            violinNotes.forEach((freq, idx) => {
+              const osc = audioCtx.createOscillator();
+              const gain = audioCtx.createGain();
+              const filter = audioCtx.createBiquadFilter();
+
+              osc.type = 'sawtooth';
+              osc.frequency.setValueAtTime(freq, now + idx * 0.28);
+
+              // Filtro cálido tipo caja de resonancia de madera
+              filter.type = 'lowpass';
+              filter.frequency.setValueAtTime(1400, now + idx * 0.28);
+
+              const startTime = now + idx * 0.28;
+              const duration = 1.1;
+
+              gain.gain.setValueAtTime(0.0001, startTime);
+              gain.gain.linearRampToValueAtTime(0.055, startTime + 0.18);
+              gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+
+              osc.connect(filter);
+              filter.connect(gain);
+              gain.connect(audioCtx.destination);
+
+              osc.start(startTime);
+              osc.stop(startTime + duration + 0.05);
+            });
+
+            playChordBtn.textContent = '♪ Sonando...';
+            setTimeout(() => {
+              playChordBtn.textContent = '♪ Escuchar';
+            }, 1900);
+          } catch (error) {
+            // Ignorar si el navegador bloquea el contexto de audio
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
