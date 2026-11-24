@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix | Clases Personalizadas de Violín en Santa Cruz, Bolivia</title>
+  <meta name="description" content="Aprende a tocar el violín desde cero o perfecciona tu técnica con Phoenix en Santa Cruz, Bolivia. Clases personalizadas para niños, jóvenes y adultos.">
+  
+  <!-- SEO JSON-LD ESTRUCTURADO (Person & Local Service) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Phoenix",
+    "jobTitle": "Instructor y Músico Violinista",
+    "description": "Clases personalizadas de violín para todos los niveles en Santa Cruz, Bolivia.",
+    "telephone": "+59163607250",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santa Cruz de la Sierra",
+      "addressCountry": "BO"
+    },
+    "offers": {
+      "@type": "Offer",
+      "name": "Clases de Violín Personalizadas",
+      "areaServed": "Santa Cruz, Bolivia"
+    }
+  }
+  </script>
+
+  <style>
+    /* 1. RESET Y VARIABLES GLOBALES (TOKENS CSS) */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      /* Tríada cromática Arte, Música & Elegancia (Contraste >= 4.5:1 WCAG AA) */
+      --primary: #18181b;
+      --primary-hover: #27272a;
+      --accent: #b45309;
+      --accent-light: #fef3c7;
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #18181b;
+      --text-muted: #52525b;
+      --border: #e4e4e7;
+      
+      /* Escala Tipográfica y Espaciado Fluido (clamp) */
+      --font-h1: clamp(2rem, 2.2vw + 1.4rem, 3.5rem);
+      --font-h2: clamp(1.5rem, 1.3vw + 1.15rem, 2.35rem);
+      --font-h3: clamp(1.15rem, 0.5vw + 1rem, 1.4rem);
+      --font-body: clamp(1rem, 0.25vw + 0.95rem, 1.125rem);
+      --space-section: clamp(3.5rem, 5.5vw + 1.5rem, 6.5rem);
+      --gutter: clamp(1rem, 2.5vw + 0.5rem, 2.5rem);
+      
+      /* Elevaciones y Microinteracciones */
+      --shadow-sm: 0 1px 3px rgba(24, 24, 27, 0.08);
+      --shadow-md: 0 4px 12px -2px rgba(24, 24, 27, 0.08);
+      --shadow-lg: 0 12px 24px -4px rgba(24, 24, 27, 0.12);
+      --transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-size: var(--font-body);
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 2. TIPOGRAFÍA Y JERARQUÍA */
+    h1, h2, h3 {
+      line-height: 1.18;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+    h1 { font-size: var(--font-h1); }
+    h2 { font-size: var(--font-h2); }
+    h3 { font-size: var(--font-h3); font-weight: 700; }
+
+    /* 3. LAYOUTS FLUIDOS E INTRÍNSECOS */
+    .container {
+      width: min(100% - (var(--gutter) * 1.5), 1180px);
+      margin-inline: auto;
+    }
+
+    section {
+      padding-block: var(--space-section);
+    }
+
+    .section-header {
+      max-width: 680px;
+      margin-block-end: clamp(2rem, 3vw, 3rem);
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      background-color: var(--accent-light);
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      margin-block-end: 0.75rem;
+    }
+
+    /* 4. NAVEGACIÓN SUPERIOR ACCESIBLE */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(250, 250, 249, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(1rem, 2.5vw, 2rem);
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.5rem;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: inline-flex;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        inset-inline: 0;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-md);
+      }
+      .nav-links.open {
+        display: flex;
+      }
+    }
+
+    /* 5. BOTONES Y OBJETIVOS TÁCTILES (>= 44x44px) */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-height: 48px;
+      min-width: 48px;
+      padding: 0.8rem 1.65rem;
+      border-radius: 0.6rem;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform var(--transition), background-color var(--transition), box-shadow var(--transition);
+    }
+
+    .btn:focus-visible, button:focus-visible, a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-accent {
+      background-color: var(--accent);
+      color: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-accent:hover {
+      background-color: #92400e;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text);
+      background-color: var(--surface);
+    }
+
+    /* 6. HERO DE AUTORIDAD (LCP OPTIMIZADO) */
+    .hero {
+      padding-block: clamp(2.5rem, 5vw, 5rem);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+      gap: clamp(2rem, 4vw, 4rem);
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      margin-block-end: 1.25rem;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.05rem, 0.4vw + 1rem, 1.25rem);
+      color: var(--text-muted);
+      margin-block-end: 2rem;
+      max-width: 54ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-block-end: 2rem;
+    }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .hero-visual {
+      position: relative;
+      background: linear-gradient(135deg, #fef3c7 0%, #f5f5f4 100%);
+      border-radius: 1.5rem;
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4 / 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* 7. BIO NARRATIVA Y METODOLOGÍA */
+    .bio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: var(--gutter);
+    }
+
+    .milestone-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .milestone-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 0.5rem;
+      background-color: var(--accent-light);
+      color: var(--accent);
+      font-weight: 800;
+      margin-block-end: 1rem;
+    }
+
+    /* 8. PORTAFOLIO / PROGRAMAS CON FILTROS INTERACTIVOS */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-block-end: 2rem;
+    }
+
+    .filter-btn {
+      min-height: 44px;
+      padding: 0.5rem 1.25rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--text);
+      color: var(--text);
+    }
+
+    .filter-btn.active {
+      background-color: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: var(--gutter);
+    }
+
+    .card-container {
+      container-type: inline-size;
+      container-name: program-card;
+    }
+
+    .program-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.75rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .program-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .program-card[hidden] {
+      display: none;
+    }
+
+    .program-badge {
+      align-self: flex-start;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.35rem;
+      margin-block-end: 1rem;
+    }
+
+    .program-card p {
+      color: var(--text-muted);
+      margin-block: 0.75rem 1.5rem;
+    }
+
+    /* 9. CARRUSEL NATIVO CSS SCROLL-SNAP (EXPERIENCIA DE ALUMNOS) */
+    .snap-track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(min(100%, 340px), 1fr);
+      gap: var(--gutter);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-block-end: 1rem;
+      scrollbar-width: thin;
+    }
+
+    .snap-card {
+      scroll-snap-align: start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .stars {
+      color: #d97706;
+      letter-spacing: 0.1em;
+      font-size: 1.1rem;
+    }
+
+    /* 10. SECCIÓN DE AGENDAMIENTO DIRECTO */
+    .cta-box {
+      background-color: var(--primary);
+      color: #ffffff;
+      border-radius: 1.5rem;
+      padding: clamp(2rem, 5vw, 4rem);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .cta-box h2 {
+      color: #ffffff;
+      margin-block-end: 1rem;
+    }
+
+    .cta-box p {
+      color: #d4d4d8;
+      margin-block-end: 1.5rem;
+    }
+
+    .booking-card {
+      background: var(--surface);
+      color: var(--text);
+      padding: 1.75rem;
+      border-radius: 1rem;
+    }
+
+    .form-group {
+      margin-block-end: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-block-end: 0.4rem;
+    }
+
+    .form-control {
+      width: 100%;
+      min-height: 46px;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      font-family: inherit;
+      font-size: 1rem;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    /* 11. FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-block: 2.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand" aria-label="Phoenix Violín - Ir al inicio">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 18V5l12-2v13"></path>
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+        <span>Phoenix</span>
+      </a>
+
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menú de navegación">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links" id="primaryNav">
+          <li><a href="#metodologia">Metodología</a></li>
+          <li><a href="#programas">Clases y Programas</a></li>
+          <li><a href="#enfoque">Enfoque Pedagógico</a></li>
+          <li><a href="#agendar" class="btn btn-primary" style="min-height: 44px; padding: 0.5rem 1.15rem;">Agendar Clase</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- 1. HERO DE AUTORIDAD -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="section-tag">Santa Cruz, Bolivia</span>
+          <h1>Domina el arte del violín con técnica sólida y expresión propia</h1>
+          <p class="hero-subtitle">
+            En <strong>Phoenix</strong> te acompaño paso a paso mediante clases de violín personalizadas, diseñadas para que desarrolles postura saludable, afinación precisa y musicalidad desde tus primeras notas.
+          </p>
+          <div class="hero-actions">
+            <a href="https://wa.me/59163607250?text=Hola%20Phoenix%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20para%20agendar%20una%20clase%20de%20viol%C3%ADn%20en%20Santa%20Cruz." target="_blank" rel="noopener noreferrer" class="btn btn-accent">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              Agendar Clase por WhatsApp
+            </a>
+            <a href="#programas" class="btn btn-outline">Explorar Programas</a>
+          </div>
+          <div class="hero-trust">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2.2" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Atención personalizada para principiantes, intermedios y avanzados</span>
+          </div>
+        </div>
+
+        <!-- ILUSTRACIÓN VECTORIAL HERO (SIN LAZY LOADING PARA LCP ÓPTIMO) -->
+        <div class="hero-visual" role="img" aria-label="Ilustración artística de un violín clásico y ondas musicales representando a Phoenix">
+          <svg width="320" height="240" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Círculos armónicos de fondo -->
+            <circle cx="160" cy="120" r="95" stroke="#d97706" stroke-opacity="0.2" stroke-width="1.5" stroke-dasharray="6 6"/>
+            <circle cx="160" cy="120" r="70" stroke="#b45309" stroke-opacity="0.3" stroke-width="1.5"/>
+            <!-- Silueta estilizada de Violín y Arco -->
+            <path d="M125 165C110 150 112 128 126 118C134 112 135 103 128 96C118 86 122 68 136 60C150 52 168 56 176 70C182 80 176 92 168 98C162 103 163 112 171 118C185 128 187 150 172 165C158 179 139 179 125 165Z" fill="#b45309" fill-opacity="0.14" stroke="#92400e" stroke-width="3"/>
+            <!-- Efes acústicas -->
+            <path d="M138 118C135 124 135 134 138 140" stroke="#78350f" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M160 118C163 124 163 134 160 140" stroke="#78350f" stroke-width="2.2" stroke-linecap="round"/>
+            <!-- Mástil y voluta -->
+            <line x1="149" y1="60" x2="149" y2="22" stroke="#18181b" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="149" cy="18" r="5" fill="#18181b"/>
+            <!-- Puente y cordal -->
+            <line x1="141" y1="132" x2="157" y2="132" stroke="#18181b" stroke-width="2.5"/>
+            <path d="M145 172L149 148L153 172H145Z" fill="#18181b"/>
+            <!-- Cuerdas -->
+            <line x1="147" y1="22" x2="147" y2="150" stroke="#d97706" stroke-width="0.9"/>
+            <line x1="151" y1="22" x2="151" y2="150" stroke="#d97706" stroke-width="0.9"/>
+            <!-- Arco cruzado -->
+            <line x1="75" y1="155" x2="245" y2="85" stroke="#18181b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="78" y1="159" x2="242" y2="89" stroke="#a1a1aa" stroke-width="1"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. BIO NARRATIVA Y METODOLOGÍA -->
+    <section id="metodologia">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Manifiesto & Metodología</span>
+          <h2>Aprender violín no tiene por qué ser rígido ni frustrante</h2>
+          <p style="color: var(--text-muted); margin-block-start: 0.75rem;">
+            El nombre <strong>Phoenix</strong> nace de la convicción de que cualquier persona puede renacer musicalmente sin importar su edad o experiencia previa. Mi enseñanza combina la disciplina clásica con un acompañamiento humano adaptado a tu ritmo en Santa Cruz.
+          </p>
+        </div>
+
+        <div class="bio-grid">
+          <article class="milestone-card">
+            <div class="milestone-number">01</div>
+            <h3>Postura Sin Tensión</h3>
+            <p style="color: var(--text-muted); margin-block-start: 0.5rem;">
+              Priorizamos la ergonomía natural del cuerpo y el agarre relajado del arco para evitar fatiga física y lograr un sonido limpio desde la primera semana.
+            </p>
+          </article>
+
+          <article class="milestone-card">
+            <div class="milestone-number">02</div>
+            <h3>Oído y Lectura Musical</h3>
+            <p style="color: var(--text-muted); margin-block-start: 0.5rem;">
+              Desarrollamos simultáneamente tu educación auditiva (afinación intuitiva) y la lectura fluida de partituras aplicadas a piezas reales, no solo ejercicios mecánicos.
+            </p>
+          </article>
+
+          <article class="milestone-card">
+            <div class="milestone-number">03</div>
+            <h3>Repertorio a tu Medida</h3>
+            <p style="color: var(--text-muted); margin-block-start: 0.5rem;">
+              Desde piezas clásicas fundamentales hasta bandas sonoras y música contemporánea: construimos un plan de estudio que mantenga viva tu motivación.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PORTAFOLIO DE PROGRAMAS CON FILTROS INTERACTIVOS -->
+    <section id="programas" style="background-color: var(--surface); border-block: 1px solid var(--border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Oferta Formativa</span>
+          <h2>Programas de Violín Personalizados</h2>
+          <p style="color: var(--text-muted); margin-block-start: 0.75rem;">
+            Selecciona tu nivel o modalidad para encontrar el formato de clase ideal para ti o tus hijos.
+          </p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Filtrar programas de violín por nivel">
+          <button type="button" class="filter-btn active" data-filter="todos">Todos los Programas</button>
+          <button type="button" class="filter-btn" data-filter="principiantes">Principiantes</button>
+          <button type="button" class="filter-btn" data-filter="intermedio">Intermedio y Técnica</button>
+          <button type="button" class="filter-btn" data-filter="especial">Preparación Especial</button>
+        </div>
+
+        <div class="programs-grid" id="programsContainer">
+          <div class="card-container" data-category="principiantes">
+            <article class="program-card">
+              <div>
+                <span class="program-badge">Nivel Inicial</span>
+                <h3>Iniciación al Violín desde Cero</h3>
+                <p>
+                  Ideal si nunca has tomado un instrumento. Aprenderás a sostener el violín, dominar el golpe de arco básico, leer tus primeras notas y tocar tus primeras melodías con seguridad.
+                </p>
+              </div>
+              <a href="https://wa.me/59163607250?text=Hola%20Phoenix%2C%20me%20interesa%20el%20programa%20de%20Iniciaci%C3%B3n%20al%20Viol%C3%ADn%20desde%20Cero." target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                Consultar Horarios
+              </a>
+            </article>
+          </div>
+
+          <div class="card-container" data-category="principiantes">
+            <article class="program-card">
+              <div>
+                <span class="program-badge">Infantil y Juvenil</span>
+                <h3>Violín Creativo para Niños y Jóvenes</h3>
+                <p>
+                  Clases dinámicas diseñadas para despertar la sensibilidad musical, la coordinación motriz y la disciplina positiva en un ambiente paciente y estimulante.
+                </p>
+              </div>
+              <a href="https://wa.me/59163607250?text=Hola%20Phoenix%2C%20quisiera%20informaci%C3%B3n%20sobre%20las%20clases%20de%20Viol%C3%ADn%20para%20Ni%C3%B1os%20y%20J%C3%B3venes." target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                Consultar Horarios
+              </a>
+            </article>
+          </div>
+
+          <div class="card-container" data-category="intermedio">
+            <article class="program-card">
+              <div>
+                <span class="program-badge">Nivel Intermedio</span>
+                <h3>Perfeccionamiento Técnico y Vibrato</h3>
+                <p>
+                  Para estudiantes que ya tocan y desean pulir cambios de posición, desarrollar un vibrato expresivo, mejorar la proyección del sonido y ampliar su repertorio.
+                </p>
+              </div>
+              <a href="https://wa.me/59163607250?text=Hola%20Phoenix%2C%20me%20interesa%20el%20programa%20de%20Perfeccionamiento%20T%C3%A9cnico%20y%20Vibrato." target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                Consultar Horarios
+              </a>
+            </article>
+          </div>
+
+          <div class="card-container" data-category="especial">
+            <article class="program-card">
+              <div>
+                <span class="program-badge">Acompañamiento Intensivo</span>
+                <h3>Preparación para Audiciones y Recitales</h3>
+                <p>
+                  Mentoría focalizada en interpretación escénica, control de nervios y montaje de obras específicas para exámenes de conservatorio, orquestas juveniles o presentaciones.
+                </p>
+              </div>
+              <a href="https://wa.me/59163607250?text=Hola%20Phoenix%2C%20busco%20asesor%C3%ADa%20para%20Preparaci%C3%B3n%20de%20Audiciones%20o%20Recitales." target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                Consultar Horarios
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PILARES DE EXPERIENCIA (CARRUSEL NATIVO CSS SCROLL-SNAP) -->
+    <section id="enfoque">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Compromiso Educativo</span>
+          <h2>Lo que obtienes en cada sesión con Phoenix</h2>
+        </div>
+
+        <div class="snap-track" role="region" aria-label="Beneficios clave de las clases de violín">
+          <article class="snap-card">
+            <div>
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <h3 style="margin-block: 0.65rem;">Asesoría en tu Instrumento</h3>
+              <p style="color: var(--text-muted);">
+                Si aún no tienes violín, te guío gratuitamente antes de comprar para que elijas la medida exacta (4/4, 3/4, 1/2) y la mejor relación calidad-precio en Santa Cruz.
+              </p>
+            </div>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent);">Acompañamiento Integral</span>
+          </article>
+
+          <article class="snap-card">
+            <div>
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <h3 style="margin-block: 0.65rem;">Material de Estudio Incluido</h3>
+              <p style="color: var(--text-muted);">
+                Recibirás partituras adaptadas, pistas de acompañamiento y guías de práctica semanal para que sepas exactamente cómo estudiar en casa entre clase y clase.
+              </p>
+            </div>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent);">Progreso Medible</span>
+          </article>
+
+          <article class="snap-card">
+            <div>
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <h3 style="margin-block: 0.65rem;">Flexibilidad Horaria</h3>
+              <p style="color: var(--text-muted);">
+                Coordinamos sesiones individuales adaptadas a tu disponibilidad académica o laboral en Santa Cruz de la Sierra, garantizando atención 100% enfocada en ti.
+              </p>
+            </div>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent);">Clases 1 a 1</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. AGENDAMIENTO DIRECTO CON GENERADOR DE MENSAJE WHATSAPP -->
+    <section id="agendar">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <span class="section-tag" style="background-color: rgba(255,255,255,0.15); color: #fef3c7;">Da el primer paso hoy</span>
+            <h2>Reserva tu primera clase de violín en Santa Cruz</h2>
+            <p>
+              Completa tus preferencias rápidas o escríbeme directamente por WhatsApp para coordinar tu horario y resolver cualquier duda sobre tu instrumento.
+            </p>
+            <ul style="list-style: none; display: grid; gap: 0.65rem; color: #e4e4e7; font-size: 0.95rem;">
+              <li>✓ Atención directa vía WhatsApp: <strong>+591 63607250</strong></li>
+              <li>✓ Ubicación: <strong>Santa Cruz de la Sierra, Bolivia</strong></li>
+              <li>✓ Sin necesidad de conocimientos previos</li>
+            </ul>
+          </div>
+
+          <div class="booking-card">
+            <h3 style="margin-block-end: 1rem;">Prepara tu solicitud rápida</h3>
+            <form id="whatsappBookingForm">
+              <div class="form-group">
+                <label for="studentName">Tu Nombre (o nombre del alumno)</label>
+                <input type="text" id="studentName" class="form-control" placeholder="Ej. Camila Rojas" required>
+              </div>
+
+              <div class="form-group">
+                <label for="studentLevel">Nivel actual</label>
+                <select id="studentLevel" class="form-control">
+                  <option value="Principiante (Desde cero)">Principiante (Desde cero)</option>
+                  <option value="Básico (Conozco algunas notas)">Básico (Conozco algunas notas)</option>
+                  <option value="Intermedio / Avanzado">Intermedio / Avanzado</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="hasViolin">¿Cuentas con violín propio?</label>
+                <select id="hasViolin" class="form-control">
+                  <option value="Sí, ya tengo violín">Sí, ya tengo violín</option>
+                  <option value="Aún no, necesito asesoría para adquirir uno">Aún no, necesito asesoría para adquirir uno</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-accent" style="width: 100%; margin-block-start: 0.5rem;">
+                Enviar Solicitud por WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>Phoenix — Clases de Violín</strong> · Santa Cruz de la Sierra, Bolivia.
+      </div>
+      <div>
+        Contacto directo: <a href="https://wa.me/59163607250" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 700; text-decoration: none;">+591 63607250</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Menú móvil accesible
+      const menuToggle = document.getElementById('menuToggle');
+      const primaryNav = document.getElementById('primaryNav');
+
+      if (menuToggle && primaryNav) {
+        menuToggle.addEventListener('click', () => {
+          const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+          primaryNav.classList.toggle('open');
+        });
+
+        primaryNav.addEventListener('click', (e) => {
+          if (e.target.tagName === 'A' && primaryNav.classList.contains('open')) {
+            primaryNav.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      // 2. Filtro interactivo de programas por categoría (Delegación de eventos)
+      const filterBar = document.querySelector('.filter-bar');
+      const programCards = document.querySelectorAll('#programsContainer .card-container');
+
+      if (filterBar) {
+        filterBar.addEventListener('click', (e) => {
+          const btn = e.target.closest('.filter-btn');
+          if (!btn) return;
+
+          filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const selectedFilter = btn.getAttribute('data-filter');
+
+          programCards.forEach(container => {
+            const card = container.querySelector('.program-card');
+            const category = container.getAttribute('data-category');
+            if (selectedFilter === 'todos' || category === selectedFilter) {
+              container.style.display = '';
+              if (card) card.removeAttribute('hidden');
+            } else {
+              container.style.display = 'none';
+              if (card) card.setAttribute('hidden', '');
+            }
+          });
+        });
+      }
+
+      // 3. Constructor seguro de enlace WhatsApp (Prevención XSS OWASP)
+      const bookingForm = document.getElementById('whatsappBookingForm');
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const rawName = document.getElementById('studentName').value.trim();
+          const rawLevel = document.getElementById('studentLevel').value;
+          const rawViolin = document.getElementById('hasViolin').value;
+
+          const safeName = rawName.slice(0, 60) || 'Interesado/a';
+
+          const messageLines = [
+            `Hola Phoenix, mi nombre es ${safeName}.`,
+            `Me gustaría agendar una clase de violín en Santa Cruz.`,
+            `• Nivel: ${rawLevel}`,
+            `• Instrumento: ${rawViolin}`
+          ];
+
+          const encodedText = encodeURIComponent(messageLines.join('\n'));
+          const whatsappUrl = `https://wa.me/59163607250?text=${encodedText}`;
+
+          window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
